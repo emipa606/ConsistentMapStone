@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using RimWorld;
 using Verse;
 using Verse.Noise;
+using RimWorld.Planet;
 
 namespace CMS
 {

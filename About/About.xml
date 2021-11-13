@@ -12,7 +12,7 @@
   You don't need this unless a mod you want to use is dependent on it, but if you think you might use one of those mods in the future then you could use this by itself. It will change the stone generation on its own but this won't have any obvious impact on your game without a mod that depends on that change.
   
   For modders, to get the stone type at a particular cell, add the assembly reference to this mod and then do something like the following:
-  var st = Map.GetComponent<CMS.MapComponent_StoneGrid>().StoneTypeAt(c);
+  var st = Map.GetComponent&lt;CMS.MapComponent_StoneGrid&gt;().StoneTypeAt(c);
   
   Be sure to add it as a dependency for your mod in the Steam upload so it's easy for users to find and install this dependency!
   </description>

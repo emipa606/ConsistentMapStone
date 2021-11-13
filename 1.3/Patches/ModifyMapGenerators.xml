@@ -9,14 +9,14 @@
 			<li Class="PatchOperationReplace">
 				<xpath>/Defs/GenStepDef[defName = "RocksFromGrid"]/genStep</xpath>
 				<value>
-					<genStep Class="CSG.GenStep_StoneFromGrid"/>
+					<genStep Class="CMS.GenStep_StoneFromGrid"/>
 				</value>
 			</li>
 			
 			<li Class="PatchOperationReplace">
 				<xpath>/Defs/GenStepDef[defName = "RocksFromGrid_NoMinerals"]/genStep</xpath>
 				<value>
-					<genStep Class="CSG.GenStep_StoneFromGrid"/>
+					<genStep Class="CMS.GenStep_StoneFromGrid"/>
 				</value>
 			</li>
 			

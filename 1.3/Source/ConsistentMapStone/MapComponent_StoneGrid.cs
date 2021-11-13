@@ -14,13 +14,13 @@ namespace CMS
 
         public MapComponent_StoneGrid(Map map) : base(map)
         {
-            RockNoises.Init(map);
+            StoneNoises.Init(map);
             StoneGrid = new TerrainDef[map.cellIndices.NumGridCells];
             for (int i = 0; i < map.cellIndices.NumGridCells; i++)
             {
-                StoneGrid[i] = GenStep_RocksFromGrid.RockDefAt(map.cellIndices.IndexToCell(i)).building.naturalTerrain;
+                StoneGrid[i] = GenStep_StoneFromGrid.RockDefAt(map.cellIndices.IndexToCell(i)).building.naturalTerrain;
             }
-            RockNoises.Reset();
+            StoneNoises.Reset();
         }
 
         public TerrainDef StoneTypeAt(IntVec3 c)
