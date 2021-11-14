@@ -17,6 +17,14 @@
   Be sure to add it as a dependency for your mod in the Steam upload so it's easy for users to find and install this dependency!
   </description>
   <loadAfter>
+    <li>brrainz.harmony</li>
     <li>Ludeon.RimWorld</li>
   </loadAfter>
+  <modDependencies>
+        <li>
+            <packageId>brrainz.harmony</packageId>
+            <displayName>Harmony</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+        </li>
+    </modDependencies>
 </ModMetaData>

@@ -14,18 +14,30 @@ namespace CMS
 
         public MapComponent_StoneGrid(Map map) : base(map)
         {
-            StoneNoises.Init(map);
-            StoneGrid = new TerrainDef[map.cellIndices.NumGridCells];
-            for (int i = 0; i < map.cellIndices.NumGridCells; i++)
-            {
-                StoneGrid[i] = GenStep_StoneFromGrid.RockDefAt(map.cellIndices.IndexToCell(i)).building.naturalTerrain;
-            }
-            StoneNoises.Reset();
+
         }
 
         public TerrainDef StoneTypeAt(IntVec3 c)
         {
+            if (StoneGrid == null)
+                Initialize();
             return StoneGrid[map.cellIndices.CellToIndex(c)];
+        }
+
+        public override void MapGenerated()
+        {
+            Initialize();
+        }
+
+        public void Initialize()
+        {
+            RockNoises.Init(map);
+            StoneGrid = new TerrainDef[map.cellIndices.NumGridCells];
+            for (int i = 0; i < map.cellIndices.NumGridCells; i++)
+            {
+                StoneGrid[i] = GenStep_RocksFromGrid.RockDefAt(map.cellIndices.IndexToCell(i)).building.naturalTerrain;
+            }
+            RockNoises.Reset();
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RimWorld;
 using Verse;
+using HarmonyLib;
 
 namespace SR
 {
@@ -13,7 +14,8 @@ namespace SR
     {
         static ConsistentMapStone()
         {
-
+            var harmony = new Harmony("UdderlyEvelyn.ConsistentMapStone");
+            harmony.PatchAll();
         }
     }
 }
