@@ -7,7 +7,7 @@ using RimWorld;
 using Verse;
 using HarmonyLib;
 
-namespace SR
+namespace CMS
 {
     [StaticConstructorOnStartup]
     public static class ConsistentMapStone
