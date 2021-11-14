@@ -20,7 +20,8 @@ namespace CMS
 			{
 				RockNoises.RockNoise rockNoise = new RockNoises.RockNoise();
 				rockNoise.rockDef = rockDef;
-				rockNoise.noise = new Perlin(0.004999999888241291, 2.0, 0.5, 6, map.ConstantRandSeed, QualityMode.Medium);
+				//Use a consistent seed to make it reproducible, but add hashcode per rock type or else they all have the same noise in the end. The division by two is to make it less likely that we end up hitting the integer MaxValue.
+				rockNoise.noise = new Perlin(0.004999999888241291, 2.0, 0.5, 6, (map.ConstantRandSeed + rockDef.GetHashCode() / 2), QualityMode.Medium);
 				RockNoises.rockNoises.Add(rockNoise);
 				NoiseDebugUI.StoreNoiseRender(rockNoise.noise, rockNoise.rockDef + " score", map.Size.ToIntVec2);
 			}
