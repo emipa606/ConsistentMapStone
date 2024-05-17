@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UdderlyEvelyn.ConsistentMapStone", "UdderlyEvelyn.ConsistentMapStone\UdderlyEvelyn.ConsistentMapStone.csproj", "{4A725A91-6710-479F-8EDC-E44BDECF3CD1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A725A91-6710-479F-8EDC-E44BDECF3CD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A725A91-6710-479F-8EDC-E44BDECF3CD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A725A91-6710-479F-8EDC-E44BDECF3CD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A725A91-6710-479F-8EDC-E44BDECF3CD1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7550af11-a7c9-48f5-86da-7c05c6bb7f8c}
+	EndGlobalSection
+EndGlobal
