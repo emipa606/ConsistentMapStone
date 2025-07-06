@@ -5,41 +5,41 @@ namespace CMS;
 
 public class MapComponent_StoneGrid(Map map) : MapComponent(map)
 {
-    public ThingDef[] StoneGrid;
+    private ThingDef[] stoneGrid;
 
     public ThingDef StoneChunkAt(IntVec3 c)
     {
-        return StoneTypeAt(c).building.mineableThing;
+        return stoneTypeAt(c).building.mineableThing;
     }
 
     public TerrainDef StoneTerrainAt(IntVec3 c)
     {
-        return StoneTypeAt(c).building.naturalTerrain;
+        return stoneTypeAt(c).building.naturalTerrain;
     }
 
-    public ThingDef StoneTypeAt(IntVec3 c)
+    private ThingDef stoneTypeAt(IntVec3 c)
     {
-        if (StoneGrid == null)
+        if (stoneGrid == null)
         {
-            Initialize();
+            initialize();
         }
 
-        return StoneGrid?[map.cellIndices.CellToIndex(c)];
+        return stoneGrid?[map.cellIndices.CellToIndex(c)];
     }
 
     public override void MapGenerated()
     {
-        Initialize();
+        initialize();
     }
 
-    public void Initialize()
+    private void initialize()
     {
         RockNoises.Init(map);
-        StoneGrid = new ThingDef[map.cellIndices.NumGridCells];
+        stoneGrid = new ThingDef[map.cellIndices.NumGridCells];
         for (var i = 0; i < map.cellIndices.NumGridCells; i++)
         {
             var thingDef = GenStep_RocksFromGrid.RockDefAt(map.cellIndices.IndexToCell(i));
-            StoneGrid[i] = thingDef;
+            stoneGrid[i] = thingDef;
         }
 
         RockNoises.Reset();

@@ -5,7 +5,7 @@ using Verse.Noise;
 namespace CMS;
 
 [HarmonyPatch(typeof(RockNoises), nameof(RockNoises.Init))]
-internal class HarmonyPatches
+internal class RockNoises_Init
 {
     private static bool Prefix(Map map)
     {
