@@ -5,9 +5,9 @@ using Verse.Noise;
 namespace CMS;
 
 [HarmonyPatch(typeof(RockNoises), nameof(RockNoises.Init))]
-internal class RockNoises_Init
+internal static class RockNoises_Init
 {
-    private static bool Prefix(Map map)
+    public static bool Prefix(Map map)
     {
         RockNoises.rockNoises = [];
         foreach (var item in Find.World.NaturalRockTypesIn(map.Tile))

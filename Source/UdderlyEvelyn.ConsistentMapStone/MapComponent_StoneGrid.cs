@@ -45,7 +45,7 @@ public class MapComponent_StoneGrid(Map map) : MapComponent(map)
         RockNoises.Reset();
     }
 
-    public ThingDef ChunkFor(ThingDef rockDef)
+    public static ThingDef ChunkFor(ThingDef rockDef)
     {
         Log.Message($"Getting chunk name for {rockDef.defName}.");
         return DefDatabase<ThingDef>.GetNamed($"{rockDef.defName}Chunk");
